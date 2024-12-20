@@ -1,5 +1,6 @@
 import Components from 'unplugin-vue-components/webpack';
 import NutUIResolver from '@nutui/auto-import-resolver';
+import path from 'path';
 
 const config = {
   projectName: 'lean-taro',
@@ -66,6 +67,13 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
+    },
+    miniCssExtractPluginOption: {
+      //忽略css文件引入顺序
+      ignoreOrder: true
+    },
+    optimizeMainPackage: {
+      enable: true
     }
   },
   h5: {
@@ -96,7 +104,11 @@ const config = {
         }
       }
     }
-  }
+  },
+
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'), // 示例：别名设置
+  },
 }
 
 module.exports = function (merge) {
@@ -104,4 +116,5 @@ module.exports = function (merge) {
     return merge({}, config, require('./dev'))
   }
   return merge({}, config, require('./prod'))
+
 }

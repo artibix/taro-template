@@ -2,6 +2,11 @@ module.exports = {
   env: {
     NODE_ENV: '"production"'
   },
+  copy: {
+    patterns: [
+      { from: 'src/assets/', to: 'dist/assets/'},
+    ],
+  },
   defineConstants: {
   },
   mini: {},
