@@ -7,6 +7,20 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    NutButton: typeof import('@nutui/nutui-taro')['Button']
+    NutCell: typeof import('@nutui/nutui-taro')['Cell']
+    NutCellGroup: typeof import('@nutui/nutui-taro')['CellGroup']
+    NutEmpty: typeof import('@nutui/nutui-taro')['Empty']
+    NutGrid: typeof import('@nutui/nutui-taro')['Grid']
+    NutGridItem: typeof import('@nutui/nutui-taro')['GridItem']
+    NutIcon: typeof import('@nutui/nutui-taro')['Icon']
+    NutInput: typeof import('@nutui/nutui-taro')['Input']
+    NutNavbar: typeof import('@nutui/nutui-taro')['Navbar']
+    NutRate: typeof import('@nutui/nutui-taro')['Rate']
+    NutSearchbar: typeof import('@nutui/nutui-taro')['Searchbar']
+    NutSkeleton: typeof import('@nutui/nutui-taro')['Skeleton']
+    NutTabPane: typeof import('@nutui/nutui-taro')['TabPane']
+    NutTabs: typeof import('@nutui/nutui-taro')['Tabs']
     Thread: typeof import('./src/components/thread.vue')['default']
     Thread_detail: typeof import('./src/components/thread_detail.vue')['default']
     Thread_list: typeof import('./src/components/thread_list.vue')['default']
