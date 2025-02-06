@@ -1,41 +1,32 @@
-export default {
+// src/app.config.ts
+export default ({
   pages: [
     'pages/index/index',
-    'pages/nodes/nodes',
-    'pages/hot/hot',
-    'pages/node_detail/node_detail',
-    'pages/thread_detail/thread_detail',
+    'pages/profile/index'
   ],
   tabBar: {
+    color: '#666666',
+    selectedColor: '#2B87FF',
+    backgroundColor: '#ffffff',
     list: [
       {
-        iconPath: 'resource/latest.png',
-        selectedIconPath: 'resource/lastest_on.png',
         pagePath: 'pages/index/index',
-        text: '最新',
+        text: '首页',
+        iconPath: '/assets/img/home-gray.png',
+        selectedIconPath: '/assets/img/home-blue.png'
       },
       {
-        iconPath: 'resource/hotest.png',
-        selectedIconPath: 'resource/hotest_on.png',
-        pagePath: 'pages/hot/hot',
-        text: '热门',
-      },
-      {
-        iconPath: 'resource/node.png',
-        selectedIconPath: 'resource/node_on.png',
-        pagePath: 'pages/nodes/nodes',
-        text: '节点',
-      },
-    ],
-    color: '#000',
-    selectedColor: '#56abe4',
-    backgroundColor: '#fff',
-    borderStyle: 'white',
+        pagePath: 'pages/profile/index',
+        text: '我的',
+        iconPath: '/assets/img/user-gray.png',
+        selectedIconPath: '/assets/img/user-blue.png'
+      }
+    ]
   },
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'V2EX',
-    navigationBarTextStyle: 'black',
-  },
-}
+    navigationBarTitleText: '个人中心',
+    navigationBarTextStyle: 'black'
+  }
+})
